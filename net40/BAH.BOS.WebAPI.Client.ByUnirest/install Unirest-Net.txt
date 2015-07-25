@@ -1,0 +1,10 @@
+﻿Unirest-Net 1.0.6.3
+Unirest is a set of lightweight HTTP libraries available in PHP, Ruby, Python, Java, Objective-C.
+
+This is a port of the Java library to .NET, and is done independently and without affiliation to the original Unirest project.
+
+To install Unirest-Net, run the following command in the Package Manager Console
+
+For more details : http://www.nuget.org/packages/Unirest-API/1.0.6.3
+
+PM> Install-Package Unirest-API -Version 1.0.6.3

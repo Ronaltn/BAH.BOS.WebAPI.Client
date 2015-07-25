@@ -1,0 +1,200 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15749559-9EB3-4A29-92A6-EC4B2DD36E86}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BAH.BOS.WebAPI.Client.Compact</RootNamespace>
+    <AssemblyName>BAH.BOS.WebAPI.Client.Compact</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>BAH.BOS.WebAPI.Client.Compact</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <DocumentationFile>..\bin\BAH.BOS.WebAPI.Client.Compact.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <DocumentationFile>..\bin\BAH.BOS.WebAPI.Client.Compact.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json.Compact, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Partner\Json.NET\35r8\Bin\Compact\Newtonsoft.Json.Compact.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\APIClient.cs">
+      <Link>APIClient.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\APIException.cs">
+      <Link>APIException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\APIExceptionWrapper.cs">
+      <Link>APIExceptionWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\APIOperation.cs">
+      <Link>APIOperation.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\APIRequest.cs">
+      <Link>APIRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\APIResponse.cs">
+      <Link>APIResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\Asynchronous\ClientHttpTask.cs">
+      <Link>Asynchronous\ClientHttpTask.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\BusinessServiceOperation\ExecuteServiceOperation.cs">
+      <Link>BusinessServiceOperation\ExecuteServiceOperation.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\Audit.cs">
+      <Link>DynamicFormOperation\Audit.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\BDEnable.cs">
+      <Link>DynamicFormOperation\BDEnable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\BDForbid.cs">
+      <Link>DynamicFormOperation\BDForbid.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\BillInvalid.cs">
+      <Link>DynamicFormOperation\BillInvalid.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\Delete.cs">
+      <Link>DynamicFormOperation\Delete.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\ExecuteFormOperation.cs">
+      <Link>DynamicFormOperation\ExecuteFormOperation.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\FormOperation.cs">
+      <Link>DynamicFormOperation\FormOperation.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\Save.cs">
+      <Link>DynamicFormOperation\Save.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\SingleActionOperation.cs">
+      <Link>DynamicFormOperation\SingleActionOperation.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\StatusConvert.cs">
+      <Link>DynamicFormOperation\StatusConvert.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\Submit.cs">
+      <Link>DynamicFormOperation\Submit.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\UnAudit.cs">
+      <Link>DynamicFormOperation\UnAudit.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\ValidateUser.cs">
+      <Link>DynamicFormOperation\ValidateUser.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\View.cs">
+      <Link>DynamicFormOperation\View.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\FormOperation\ResponseError.cs">
+      <Link>FormOperationResult\FormOperation\ResponseError.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\FormOperation\ResponseResult.cs">
+      <Link>FormOperationResult\FormOperation\ResponseResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\FormOperation\ResponseStatus.cs">
+      <Link>FormOperationResult\FormOperation\ResponseStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\FormOperation\ResultConvert.cs">
+      <Link>FormOperationResult\FormOperation\ResultConvert.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\Save\SaveResponseResult.cs">
+      <Link>FormOperationResult\Save\SaveResponseResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\Save\SaveResult.cs">
+      <Link>FormOperationResult\Save\SaveResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\ValidateUser\ClientType.cs">
+      <Link>FormOperationResult\ValidateUser\ClientType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\ValidateUser\Context.cs">
+      <Link>FormOperationResult\ValidateUser\Context.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\ValidateUser\DatabaseType.cs">
+      <Link>FormOperationResult\ValidateUser\DatabaseType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\ValidateUser\KDOAuthInfo.cs">
+      <Link>FormOperationResult\ValidateUser\KDOAuthInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\ValidateUser\LanguageInfo.cs">
+      <Link>FormOperationResult\ValidateUser\LanguageInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\ValidateUser\LoginResultType.cs">
+      <Link>FormOperationResult\ValidateUser\LoginResultType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\ValidateUser\OrganizationInfo.cs">
+      <Link>FormOperationResult\ValidateUser\OrganizationInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\ValidateUser\RedirectFormParam.cs">
+      <Link>FormOperationResult\ValidateUser\RedirectFormParam.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\ValidateUser\ValidateUserResult.cs">
+      <Link>FormOperationResult\ValidateUser\ValidateUserResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\View\ViewResponseResult.cs">
+      <Link>FormOperationResult\View\ViewResponseResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\View\ViewResult.cs">
+      <Link>FormOperationResult\View\ViewResult.cs</Link>
+    </Compile>
+    <Compile Include="ClientAPIRequest.cs" />
+    <Compile Include="ClientHttpUtility.cs" />
+    <Compile Include="CookieManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
