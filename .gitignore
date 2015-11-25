@@ -1,0 +1,4 @@
+*.pdb
+bin
+*.suo
+obj
