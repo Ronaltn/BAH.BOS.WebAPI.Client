@@ -202,7 +202,7 @@ namespace BAH.BOS.WebAPI.Client
             this.URL = url;
             this.Parameters = parameters;
 
-            SetDefaultValue();
+            this.SetDefaultValue();
         }//end constructor
 
         /// <summary>
