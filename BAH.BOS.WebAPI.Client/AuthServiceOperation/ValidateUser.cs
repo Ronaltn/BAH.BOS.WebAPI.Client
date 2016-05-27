@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
+namespace BAH.BOS.WebAPI.Client.AuthServiceOperation
 {
     /// <summary>
     /// 执行验证用户操作。

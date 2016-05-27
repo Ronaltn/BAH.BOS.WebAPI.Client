@@ -1,4 +1,5 @@
-﻿using BAH.BOS.WebAPI.Client.BusinessServiceOperation;
+﻿using BAH.BOS.WebAPI.Client.AuthServiceOperation;
+using BAH.BOS.WebAPI.Client.BusinessServiceOperation;
 using BAH.BOS.WebAPI.Client.DynamicFormOperation;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -64,7 +65,7 @@ namespace BAH.BOS.WebAPI.Client
 
         #endregion
 
-        #region DynamicFormOperation
+        #region AuthServiceOperation
 
         #region ValidateUser
 
@@ -90,6 +91,10 @@ namespace BAH.BOS.WebAPI.Client
         }//end method
 
         #endregion
+
+        #endregion
+
+        #region DynamicFormOperation
 
         #region ExecuteFormOperation
 

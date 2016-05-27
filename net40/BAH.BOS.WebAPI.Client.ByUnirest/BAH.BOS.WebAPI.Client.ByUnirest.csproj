@@ -109,11 +109,23 @@
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\APIResponse.cs">
       <Link>APIResponse.cs</Link>
     </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\GetContext.cs">
+      <Link>AuthServiceOperation\GetContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\Logout.cs">
+      <Link>AuthServiceOperation\Logout.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\ValidateUser.cs">
+      <Link>AuthServiceOperation\ValidateUser.cs</Link>
+    </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\BusinessServiceOperation\ExecuteServiceOperation.cs">
       <Link>BusinessServiceOperation\ExecuteServiceOperation.cs</Link>
     </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\Audit.cs">
       <Link>DynamicFormOperation\Audit.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\BatchSave.cs">
+      <Link>DynamicFormOperation\BatchSave.cs</Link>
     </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\BDEnable.cs">
       <Link>DynamicFormOperation\BDEnable.cs</Link>
@@ -133,6 +145,9 @@
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\FormOperation.cs">
       <Link>DynamicFormOperation\FormOperation.cs</Link>
     </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\Query.cs">
+      <Link>DynamicFormOperation\Query.cs</Link>
+    </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\Save.cs">
       <Link>DynamicFormOperation\Save.cs</Link>
     </Compile>
@@ -147,9 +162,6 @@
     </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\UnAudit.cs">
       <Link>DynamicFormOperation\UnAudit.cs</Link>
-    </Compile>
-    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\ValidateUser.cs">
-      <Link>DynamicFormOperation\ValidateUser.cs</Link>
     </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\View.cs">
       <Link>DynamicFormOperation\View.cs</Link>
