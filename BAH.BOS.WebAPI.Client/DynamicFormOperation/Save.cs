@@ -121,12 +121,23 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
         /// <summary>
         /// 设置待保存的数据对象。
         /// </summary>
+        /// <typeparam name="T">继承APIOperation的类。</typeparam>
+        /// <param name="model">待保存的数据对象。</param>
+        /// <returns>返回类本身实例对象。</returns>
+        public virtual T SetModel<T>(object model) where T : APIOperation
+        {
+            this.Model = model;
+            return this as T;
+        }//end method
+
+        /// <summary>
+        /// 设置待保存的数据对象。
+        /// </summary>
         /// <param name="model">待保存的数据对象。</param>
         /// <returns>返回类本身实例对象。</returns>
         public virtual Save SetModel(object model)
         {
-            this.Model = model;
-            return this;
+            return this.SetModel<Save>(model);
         }//end method
 
         #endregion

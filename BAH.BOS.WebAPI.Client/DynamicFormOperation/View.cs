@@ -85,7 +85,7 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
         }//end method
 
         /// <summary>
-        /// 设置单据（基础资料）主键
+        /// 设置单据（基础资料）主键。
         /// </summary>
         /// <param name="id">单据（基础资料）主键。</param>
         /// <returns>返回类本身实例对象。</returns>
