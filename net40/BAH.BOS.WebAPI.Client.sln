@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAH.BOS.WebAPI.Client.ByUni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAH.BOS.WebAPI.Client.ByKd", "BAH.BOS.WebAPI.Client.ByKd\BAH.BOS.WebAPI.Client.ByKd.csproj", "{1575AB2C-084B-4890-B769-5AF4FE5754A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAH.BOS.WebAPI.Client.UnitTest.ByKd", "BAH.BOS.WebAPI.Client.UnitTest.ByKd\BAH.BOS.WebAPI.Client.UnitTest.ByKd.csproj", "{E86E7A5F-0AC9-4949-98A7-800722897D5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1575AB2C-084B-4890-B769-5AF4FE5754A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1575AB2C-084B-4890-B769-5AF4FE5754A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1575AB2C-084B-4890-B769-5AF4FE5754A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E86E7A5F-0AC9-4949-98A7-800722897D5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E86E7A5F-0AC9-4949-98A7-800722897D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E86E7A5F-0AC9-4949-98A7-800722897D5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E86E7A5F-0AC9-4949-98A7-800722897D5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
