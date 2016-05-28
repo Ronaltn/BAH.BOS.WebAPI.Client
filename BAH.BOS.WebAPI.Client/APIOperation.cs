@@ -107,7 +107,7 @@ namespace BAH.BOS.WebAPI.Client
         /// <returns>返回API请求实例对象。</returns>
         public virtual APIRequest ToAPIRequest()
         {
-            return ToAPIRequest<APIRequest>();
+            return this.ToAPIRequest<APIRequest>();
         }//end method
 
         #endregion

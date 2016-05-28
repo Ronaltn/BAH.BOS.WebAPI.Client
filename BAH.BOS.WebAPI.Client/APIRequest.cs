@@ -189,7 +189,7 @@ namespace BAH.BOS.WebAPI.Client
         /// </summary>
         public APIRequest()
         {
-            SetDefaultValue();
+            this.SetDefaultValue();
         }//end constructor
 
         /// <summary>
@@ -216,7 +216,7 @@ namespace BAH.BOS.WebAPI.Client
             this.URL = operation.RequestUrl;
             this.Parameters = operation.RequestParameters;
 
-            SetDefaultValue();
+            this.SetDefaultValue();
         }//end constructor
 
         #endregion

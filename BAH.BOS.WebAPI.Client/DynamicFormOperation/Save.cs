@@ -31,19 +31,18 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
         {
             get 
             {
-                var creator = this.Creator;
-                if (string.IsNullOrEmpty(creator))
-                {
-                    creator = "BAH";
-                }//end if
-
                 var parametersArray = new object[]{
                     this.DynamicFormViewId,
-                    new { Creator = creator, NeedUpDateFields = this.NeedUpdateFieldKeys, Model = this.Model }
+                    new 
+                    {
+                        Creator = string.IsNullOrEmpty(this.Creator) ? "BAH" : this.Creator,
+                        NeedUpDateFields = this.NeedUpdateFieldKeys, 
+                        Model = this.Model 
+                    }
                 };
 
                 return JsonConvert.SerializeObject(parametersArray);
-            }
+            }//end get
         }//end property
 
         #endregion

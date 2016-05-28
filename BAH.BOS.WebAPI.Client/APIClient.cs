@@ -67,16 +67,16 @@ namespace BAH.BOS.WebAPI.Client
 
         #region AuthServiceOperation
 
-        #region ValidateUser
+        #region Login
 
         /// <summary>
         /// 执行验证用户操作，
         /// 其他操作执行之前需要先调用该方法来取得认证。
         /// </summary>
         /// <returns>返回验证用户操作实例对象。</returns>
-        public ValidateUser ValidateUser()
+        public Login Login()
         {
-            return ValidateUser(this.URL);
+            return Login(this.URL);
         }//end method
 
         /// <summary>
@@ -85,9 +85,9 @@ namespace BAH.BOS.WebAPI.Client
         /// </summary>
         /// <param name="url">K/3 Cloud系统的根级URL。</param>
         /// <returns>返回验证用户操作实例对象。</returns>
-        public static ValidateUser ValidateUser(string url)
+        public static Login Login(string url)
         {
-            return CreateAPIOperation<ValidateUser>(url);
+            return CreateAPIOperation<Login>(url);
         }//end method
 
         #endregion

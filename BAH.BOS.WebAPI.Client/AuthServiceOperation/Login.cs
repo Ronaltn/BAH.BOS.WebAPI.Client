@@ -1,15 +1,16 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 
 namespace BAH.BOS.WebAPI.Client.AuthServiceOperation
 {
     /// <summary>
-    /// 执行验证用户操作。
+    /// 执行登录操作。
     /// </summary>
-    public class ValidateUser : APIOperation
+    public class Login : APIOperation
     {
         #region 公共覆盖操作参数
 
@@ -35,7 +36,7 @@ namespace BAH.BOS.WebAPI.Client.AuthServiceOperation
                     this.DBId,
                     this.UserName,
                     this.Password,
-                    this.UserLCID
+                    this.UserLCID == default(int) ? CultureInfo.CurrentCulture.LCID : this.UserLCID
                 };
 
                 return JsonConvert.SerializeObject(parametersArray);
@@ -75,7 +76,7 @@ namespace BAH.BOS.WebAPI.Client.AuthServiceOperation
         /// </summary>
         /// <param name="dbId">数据库标识。</param>
         /// <returns>返回类本身实例对象。</returns>
-        public virtual ValidateUser SetDBId(string dbId)
+        public virtual Login SetDBId(string dbId)
         {
             this.DBId = dbId;
             return this;
@@ -86,7 +87,7 @@ namespace BAH.BOS.WebAPI.Client.AuthServiceOperation
         /// </summary>
         /// <param name="userName">用户名。</param>
         /// <returns>返回类本身实例对象。</returns>
-        public virtual ValidateUser SetUserName(string userName)
+        public virtual Login SetUserName(string userName)
         {
             this.UserName = userName;
             return this;
@@ -97,7 +98,7 @@ namespace BAH.BOS.WebAPI.Client.AuthServiceOperation
         /// </summary>
         /// <param name="password">用户密码。</param>
         /// <returns>返回类本身实例对象。</returns>
-        public virtual ValidateUser SetPassword(string password)
+        public virtual Login SetPassword(string password)
         {
             this.Password = password;
             return this;
@@ -108,9 +109,20 @@ namespace BAH.BOS.WebAPI.Client.AuthServiceOperation
         /// </summary>
         /// <param name="lcId">用户本地化语言标识。</param>
         /// <returns>返回类本身实例对象。</returns>
-        public virtual ValidateUser SetUserLCID(int lcId)
+        public virtual Login SetUserLCID(int lcId)
         {
             this.UserLCID = lcId;
+            return this;
+        }//end method
+
+        /// <summary>
+        /// 设置用户本地化语言标识。
+        /// </summary>
+        /// <param name="culture">区域信息对象。</param>
+        /// <returns>返回类本身实例对象。</returns>
+        public virtual Login SetUserLCID(CultureInfo culture)
+        {
+            this.UserLCID = culture.LCID;
             return this;
         }//end method
 

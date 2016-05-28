@@ -113,7 +113,7 @@ namespace BAH.BOS.WebAPI.Client
             int timeout = 0, 
             int reportInterval = 5)
         {
-            CreateApiClientInstance();
+            this.CreateApiClientInstance();
 
             var paramatersArray = JsonConvert.DeserializeObject<object[]>(this.Operation.RequestParameters);
             return _client.ExecuteAsync<T>(this.Operation.ServiceName, 

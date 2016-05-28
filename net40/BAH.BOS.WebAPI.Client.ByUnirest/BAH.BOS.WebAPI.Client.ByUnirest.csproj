@@ -7,8 +7,8 @@
     <ProjectGuid>{3401B55F-B996-458B-980C-4E001171EDDF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BAH.BOS.WebAPI.Client.ByUnirest</RootNamespace>
-    <AssemblyName>BAH.BOS.WebAPI.Client.ByUnirest</AssemblyName>
+    <RootNamespace>BAH.BOS.WebAPI.Client</RootNamespace>
+    <AssemblyName>BAH.BOS.WebAPI.Client</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>ecb1df69</NuGetPackageImportStamp>
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\bin\ByUnirest\BAH.BOS.WebAPI.Client.ByUnirest.XML</DocumentationFile>
+    <DocumentationFile>..\bin\ByUnirest\BAH.BOS.WebAPI.Client.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,7 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\bin\ByUnirest\BAH.BOS.WebAPI.Client.ByUnirest.XML</DocumentationFile>
+    <DocumentationFile>..\bin\ByUnirest\BAH.BOS.WebAPI.Client.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -112,11 +112,11 @@
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\GetContext.cs">
       <Link>AuthServiceOperation\GetContext.cs</Link>
     </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\Login.cs">
+      <Link>AuthServiceOperation\Login.cs</Link>
+    </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\Logout.cs">
       <Link>AuthServiceOperation\Logout.cs</Link>
-    </Compile>
-    <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\ValidateUser.cs">
-      <Link>AuthServiceOperation\ValidateUser.cs</Link>
     </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\BusinessServiceOperation\ExecuteServiceOperation.cs">
       <Link>BusinessServiceOperation\ExecuteServiceOperation.cs</Link>
@@ -218,6 +218,7 @@
       <Link>FormOperationResult\View\ViewResult.cs</Link>
     </Compile>
     <Compile Include="Asynchronous\UnirestHttpTask.cs" />
+    <Compile Include="UnirestAPIOperationExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnirestAPIRequest.cs" />
   </ItemGroup>
