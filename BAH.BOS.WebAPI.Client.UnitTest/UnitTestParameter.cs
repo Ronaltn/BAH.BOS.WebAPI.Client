@@ -16,6 +16,7 @@ namespace BAH.BOS.WebAPI.Client.UnitTest
         public virtual string URL
         {
             //ipv4.fiddler地址是针对Fidder捕获本机http请求所设置的特殊地址，
+            //相关知识:http://stackoverflow.com/questions/826134/how-to-display-localhost-traffic-in-fiddler-while-debugging-an-asp-net-applicati
             //若没有使用Fidder捕获需求可替换为localhost。
             get { return "http://ipv4.fiddler/K3Cloud"; }
         }//end property
