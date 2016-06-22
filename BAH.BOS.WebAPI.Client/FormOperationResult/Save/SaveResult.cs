@@ -8,7 +8,7 @@ using System.Text;
 namespace BAH.BOS.WebAPI.Client.FormOperationResult.Save
 {
     [JsonObject]
-    public class SaveResult : Converter<SaveOperationResult>
+    public class SaveResult : ResultConverter<SaveFormResult>
     {
 
     }//end class

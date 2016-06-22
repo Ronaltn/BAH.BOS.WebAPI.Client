@@ -1,4 +1,4 @@
-﻿using BAH.BOS.WebAPI.Client.FormOperationResult.FormOperation;
+﻿using BAH.BOS.WebAPI.Client.FormOperationResult;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Text;
 namespace BAH.BOS.WebAPI.Client.FormOperationResult.View
 {
     [JsonObject]
-    public class ViewResult<T> : ResultConvert<ViewResponseResult<T>>
+    public class ViewResult<T> : ResultConverter<ViewFormResult<T>>
     {
 
     }//end class

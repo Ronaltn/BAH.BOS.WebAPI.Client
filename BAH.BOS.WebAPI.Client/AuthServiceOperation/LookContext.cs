@@ -9,7 +9,7 @@ namespace BAH.BOS.WebAPI.Client.AuthServiceOperation
     /// <summary>
     /// 执行获取用户上下文对象操作。
     /// </summary>
-    public class GetContext : APIOperation
+    public class LookContext : APIOperation
     {
         #region 公共覆盖操作参数
 
@@ -56,6 +56,7 @@ namespace BAH.BOS.WebAPI.Client.AuthServiceOperation
         /// 设置数据库标识。
         /// </summary>
         /// <param name="dbId">数据库标识。</param>
+        /// <param name="userToken">用户令牌。</param>
         /// <returns>返回类本身实例对象。</returns>
         public virtual GetContext SetUserToken(string userToken)
         {

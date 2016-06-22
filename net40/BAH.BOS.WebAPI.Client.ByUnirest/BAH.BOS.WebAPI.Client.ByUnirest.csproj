@@ -136,14 +136,17 @@
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthOperationResult\RedirectFormParam.cs">
       <Link>AuthOperationResult\RedirectFormParam.cs</Link>
     </Compile>
-    <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\GetContext.cs">
-      <Link>AuthServiceOperation\GetContext.cs</Link>
-    </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\Login.cs">
       <Link>AuthServiceOperation\Login.cs</Link>
     </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\Logout.cs">
       <Link>AuthServiceOperation\Logout.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\LookContext.cs">
+      <Link>AuthServiceOperation\LookContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\BusinessOperationResult\ServiceResult.cs">
+      <Link>BusinessOperationResult\ServiceResult.cs</Link>
     </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\BusinessServiceOperation\ExecuteServiceOperation.cs">
       <Link>BusinessServiceOperation\ExecuteServiceOperation.cs</Link>
@@ -193,17 +196,11 @@
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\View.cs">
       <Link>DynamicFormOperation\View.cs</Link>
     </Compile>
-    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\OperationResult.cs">
-      <Link>FormOperationResult\OperationResult.cs</Link>
-    </Compile>
-    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\OperationStatus.cs">
-      <Link>FormOperationResult\OperationStatus.cs</Link>
-    </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\ResultConverter.cs">
       <Link>FormOperationResult\ResultConverter.cs</Link>
     </Compile>
-    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\Save\SaveOperationResult.cs">
-      <Link>FormOperationResult\Save\SaveOperationResult.cs</Link>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\Save\SaveFormResult.cs">
+      <Link>FormOperationResult\Save\SaveFormResult.cs</Link>
     </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\Save\SaveResult.cs">
       <Link>FormOperationResult\Save\SaveResult.cs</Link>
@@ -211,8 +208,8 @@
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\ValidationError.cs">
       <Link>FormOperationResult\ValidationError.cs</Link>
     </Compile>
-    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\View\ViewOperationResult.cs">
-      <Link>FormOperationResult\View\ViewOperationResult.cs</Link>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\View\ViewFormResult.cs">
+      <Link>FormOperationResult\View\ViewFormResult.cs</Link>
     </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\View\ViewResult.cs">
       <Link>FormOperationResult\View\ViewResult.cs</Link>
@@ -231,9 +228,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BusinessOperationResult\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

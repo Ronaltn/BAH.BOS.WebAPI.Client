@@ -8,7 +8,7 @@ using System.Text;
 namespace BAH.BOS.WebAPI.Client.FormOperationResult.Save
 {
     [JsonObject]
-    public class SaveOperationResult : Result
+    public class SaveFormResult : FormResult
     {
         [JsonProperty]
         public string Id { get; internal set; }//end property

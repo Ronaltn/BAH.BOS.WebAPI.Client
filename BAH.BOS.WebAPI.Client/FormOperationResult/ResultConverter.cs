@@ -7,7 +7,7 @@ using System.Text;
 namespace BAH.BOS.WebAPI.Client.FormOperationResult
 {
     [JsonObject]
-    public class ResultConverter<T> where T : OperationResult
+    public class ResultConverter<T> where T : FormResult
     {
         [JsonProperty]
         public T Result { get; internal set; }//end property

@@ -7,9 +7,9 @@ using System.Text;
 namespace BAH.BOS.WebAPI.Client.FormOperationResult
 {
     [JsonObject]
-    public class OperationResult
+    public class FormResult
     {
         [JsonProperty("ResponseStatus")]
-        public Status Status { get; internal set; }//end property
+        public FormStatus Status { get; internal set; }//end property
     }//end class
 }//end namespace

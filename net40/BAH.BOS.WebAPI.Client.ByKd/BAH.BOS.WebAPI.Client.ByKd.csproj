@@ -87,14 +87,17 @@
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthOperationResult\RedirectFormParam.cs">
       <Link>AuthOperationResult\RedirectFormParam.cs</Link>
     </Compile>
-    <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\GetContext.cs">
-      <Link>AuthServiceOperation\GetContext.cs</Link>
-    </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\Login.cs">
       <Link>AuthServiceOperation\Login.cs</Link>
     </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\Logout.cs">
       <Link>AuthServiceOperation\Logout.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\LookContext.cs">
+      <Link>AuthServiceOperation\LookContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\BusinessOperationResult\ServiceResult.cs">
+      <Link>BusinessOperationResult\ServiceResult.cs</Link>
     </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\BusinessServiceOperation\ExecuteServiceOperation.cs">
       <Link>BusinessServiceOperation\ExecuteServiceOperation.cs</Link>
@@ -144,17 +147,17 @@
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\View.cs">
       <Link>DynamicFormOperation\View.cs</Link>
     </Compile>
-    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\OperationResult.cs">
-      <Link>FormOperationResult\OperationResult.cs</Link>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\FormResult.cs">
+      <Link>FormOperationResult\FormResult.cs</Link>
     </Compile>
-    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\OperationStatus.cs">
-      <Link>FormOperationResult\OperationStatus.cs</Link>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\FormStatus.cs">
+      <Link>FormOperationResult\FormStatus.cs</Link>
     </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\ResultConverter.cs">
       <Link>FormOperationResult\ResultConverter.cs</Link>
     </Compile>
-    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\Save\SaveOperationResult.cs">
-      <Link>FormOperationResult\Save\SaveOperationResult.cs</Link>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\Save\SaveFormResult.cs">
+      <Link>FormOperationResult\Save\SaveFormResult.cs</Link>
     </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\Save\SaveResult.cs">
       <Link>FormOperationResult\Save\SaveResult.cs</Link>
@@ -162,8 +165,8 @@
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\ValidationError.cs">
       <Link>FormOperationResult\ValidationError.cs</Link>
     </Compile>
-    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\View\ViewOperationResult.cs">
-      <Link>FormOperationResult\View\ViewOperationResult.cs</Link>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\View\ViewFormResult.cs">
+      <Link>FormOperationResult\View\ViewFormResult.cs</Link>
     </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\View\ViewResult.cs">
       <Link>FormOperationResult\View\ViewResult.cs</Link>

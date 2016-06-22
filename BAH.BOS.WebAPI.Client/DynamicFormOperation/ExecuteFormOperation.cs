@@ -90,9 +90,9 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
         /// </summary>
         /// <param name="operationParameters">操作参数。</param>
         /// <returns>返回类本身实例对象。</returns>
-        public virtual ExecuteFormOperation SetParameters(string parameters)
+        public virtual ExecuteFormOperation SetParameters(string operationParameters)
         {
-            this.Parameters = parameters;
+            this.Parameters = operationParameters;
             return this;
         }//end method
 
