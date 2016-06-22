@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BAH.BOS.WebAPI.Client.FormOperationResult.ValidateUser
+namespace BAH.BOS.WebAPI.Client.AuthOperationResult
 {
     [JsonObject]
     public class RedirectFormParam

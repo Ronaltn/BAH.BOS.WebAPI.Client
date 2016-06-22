@@ -15,21 +15,21 @@ namespace BAH.BOS.WebAPI.Client
         /// <summary>
         /// HTTP状态码。
         /// </summary>
-        public HttpStatusCode StatusCode { get; internal set; }//end proeprty
+        public HttpStatusCode StatusCode { get; set; }//end proeprty
 
         /// <summary>
         /// 异常实例。
         /// </summary>
-        public Exception Error { get; internal set; }//end property
+        public Exception Error { get; set; }//end property
 
         /// <summary>
         /// API异常信息。
         /// </summary>
-        public APIException APIError { get; internal set; }//end property
+        public APIException APIError { get; set; }//end property
 
         /// <summary>
         /// 泛型结果对象。
         /// </summary>
-        public T Body { get; internal set; }//end property
+        public T Body { get; set; }//end property
     }//end class
 }//end namespace

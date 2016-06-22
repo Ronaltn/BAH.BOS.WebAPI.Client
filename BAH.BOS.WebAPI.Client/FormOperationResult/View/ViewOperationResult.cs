@@ -1,13 +1,14 @@
-﻿using Newtonsoft.Json;
+﻿using BAH.BOS.WebAPI.Client.FormOperationResult;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BAH.BOS.WebAPI.Client.FormOperationResult.FormOperation
+namespace BAH.BOS.WebAPI.Client.FormOperationResult.View
 {
     [JsonObject]
-    public class ResultConvert<T> where T : ResponseResult
+    public class ViewOperationResult<T> : Result
     {
         [JsonProperty]
         public T Result { get; internal set; }//end property

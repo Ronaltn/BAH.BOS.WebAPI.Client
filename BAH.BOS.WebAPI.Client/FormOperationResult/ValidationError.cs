@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BAH.BOS.WebAPI.Client.FormOperationResult.FormOperation
+namespace BAH.BOS.WebAPI.Client.FormOperationResult
 {
     [JsonObject]
-    public class ResponseError
+    public class ValidationError
     {
         [JsonProperty]
         public string ErrorCode { get; internal set; }//end property
