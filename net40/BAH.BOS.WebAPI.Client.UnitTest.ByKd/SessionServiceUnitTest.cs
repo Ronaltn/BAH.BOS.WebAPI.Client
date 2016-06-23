@@ -1,5 +1,5 @@
 ﻿using BAH.BOS.WebAPI.Client.BusinessOperationResult;
-using BAH.BOS.WebAPI.Client.BusinessServiceOperation.SessionService;
+using BAH.BOS.WebAPI.Client.BusinessServiceOperation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Net;
@@ -19,7 +19,8 @@ namespace BAH.BOS.WebAPI.Client.UnitTest
         [TestMethod]
         public void TestHeartbeat()
         {
-            var result = APIClient.CreateAPIOperation<Heartbeat>(TestParameter.URL)
+            var result = APIClient.CreateAPIOperation<SessionService>(TestParameter.URL)
+                                  .Heartbeat()
                                   .ToKdAPIRequest()
                                   .ToAPIResponse<ServiceResult>();
 
