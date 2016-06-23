@@ -97,6 +97,9 @@
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\LookContext.cs">
       <Link>AuthServiceOperation\LookContext.cs</Link>
     </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\BusinessOperationResult\ResultCode.cs">
+      <Link>BusinessOperationResult\ResultCode.cs</Link>
+    </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\BusinessOperationResult\ServiceResult.cs">
       <Link>BusinessOperationResult\ServiceResult.cs</Link>
     </Compile>

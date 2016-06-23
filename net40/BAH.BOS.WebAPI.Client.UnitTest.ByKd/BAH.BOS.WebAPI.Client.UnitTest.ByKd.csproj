@@ -57,12 +57,18 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client.UnitTest\BaseUnitTest.cs">
+      <Link>BaseUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client.UnitTest\ParameterSingleton.cs">
+      <Link>ParameterSingleton.cs</Link>
+    </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client.UnitTest\UnitTestParameter.cs">
       <Link>UnitTestParameter.cs</Link>
     </Compile>
     <Compile Include="AuthServiceUnitTest.cs" />
-    <Compile Include="ParameterSingleton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionServiceUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BAH.BOS.WebAPI.Client.ByKd\BAH.BOS.WebAPI.Client.ByKd.csproj">
