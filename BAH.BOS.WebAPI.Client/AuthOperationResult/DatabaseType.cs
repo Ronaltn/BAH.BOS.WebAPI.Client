@@ -7,9 +7,10 @@ namespace BAH.BOS.WebAPI.Client.AuthOperationResult
 {
     public enum DatabaseType
     {
-        Oracle = 2,
         MS_SQL_Server = 3,
-        Oracle9 = 7,
-        Oracle10 = 8,
+        Oracle = 2,
+        MySQL = 6,
+        Oracle9,
+        Oracle10
     }//end enum
 }//end namespace

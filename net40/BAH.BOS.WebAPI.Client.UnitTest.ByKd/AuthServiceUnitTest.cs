@@ -1,23 +1,30 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using BAH.BOS.WebAPI.Client.AuthOperationResult;
 using BAH.BOS.WebAPI.Client.AuthServiceOperation;
-using BAH.BOS.WebAPI.Client.AuthOperationResult;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Net;
 
 namespace BAH.BOS.WebAPI.Client.UnitTest
 {
-    [TestClass]
-    public class AuthServiceUnitTest
+    //[TestClass]
+    public class AuthServiceUnitTest : BaseUnitTest
     {
         [TestMethod]
         public void TestLogin()
         {
-            var parameter = ParameterSingleton.GetInstance();
-            var context = APIClient.CreateAPIOperation<Login>(parameter.URL)
-                                  .SetDBId(parameter.DBId)
-                                  .SetUserName(parameter.UserName)
-                                  .SetPassword(parameter.Password)
+            var result = APIClient.CreateAPIOperation<Login>(TestParameter.URL)
+                                  .SetDBId(TestParameter.DBId)
+                                  .SetUserName(TestParameter.UserName)
+                                  .SetPassword(TestParameter.Password)
                                   .ToKdAPIRequest()
-                                  .ToAPIResponse<Context>();
+                                  .ToAPIResponse<LoginResult>();
+
+            Assert.AreEqual(result.StatusCode, HttpStatusCode.OK);
+            Assert.IsNull(result.Error);
+            Assert.IsNull(result.APIError);
+            Assert.IsNotNull(result.Body);
+            Assert.IsNotNull(result.Body.Context);
+            Assert.IsFalse(string.IsNullOrWhiteSpace(result.Body.Context.UserName));
         }//end method
 
     }//end class

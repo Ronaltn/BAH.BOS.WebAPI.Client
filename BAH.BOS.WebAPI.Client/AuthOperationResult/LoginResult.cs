@@ -7,7 +7,7 @@ using System.Text;
 namespace BAH.BOS.WebAPI.Client.AuthOperationResult
 {
     [JsonObject]
-    public class ValidateUserResult
+    public class LoginResult
     {
         [JsonProperty]
         public string Message { get; set; }//end property
