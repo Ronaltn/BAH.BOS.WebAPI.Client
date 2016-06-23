@@ -10,6 +10,6 @@ namespace BAH.BOS.WebAPI.Client.FormOperationResult
     public class ResultConverter<T> where T : FormResult
     {
         [JsonProperty]
-        public T Result { get; internal set; }//end property
+        public T Result { get; set; }//end property
     }//end class
 }//end namespace

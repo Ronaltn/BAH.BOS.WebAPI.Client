@@ -23,12 +23,15 @@ namespace BAH.BOS.WebAPI.Client.BusinessOperationResult
     /// 服务结果，定义Body为泛型。
     /// </summary>
     /// <typeparam name="T">泛型定义。</typeparam>
+    [JsonObject]
     public class ServiceResult<T> : ServiceResult
     {
         /// <summary>
         /// 主体对象，类型由泛型定义。
         /// </summary>
+        [JsonProperty]
         public T Body { get; set; }//end property
+
     }//end class
 
 }//end namespace

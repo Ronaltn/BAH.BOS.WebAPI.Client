@@ -173,6 +173,7 @@
     </Compile>
     <Compile Include="APIException.cs" />
     <Compile Include="Asynchronous\KdHttpTask.cs" />
+    <Compile Include="BusinessServiceOperation\SessionService\Heartbeat.cs" />
     <Compile Include="KdAPIOperationExtension.cs" />
     <Compile Include="KdAPIRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

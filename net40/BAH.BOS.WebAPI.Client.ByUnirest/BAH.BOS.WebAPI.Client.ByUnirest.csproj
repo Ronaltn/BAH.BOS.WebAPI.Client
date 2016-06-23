@@ -196,6 +196,12 @@
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\View.cs">
       <Link>DynamicFormOperation\View.cs</Link>
     </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\FormResult.cs">
+      <Link>FormOperationResult\FormResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\FormStatus.cs">
+      <Link>FormOperationResult\FormStatus.cs</Link>
+    </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\ResultConverter.cs">
       <Link>FormOperationResult\ResultConverter.cs</Link>
     </Compile>

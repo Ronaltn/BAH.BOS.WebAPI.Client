@@ -109,7 +109,7 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
         /// <summary>
         /// 设置最多允许查询的单据数量。
         /// </summary>
-        /// <param name="count">单据数量值。</param>
+        /// <param name="topRowCount">单据数量值。</param>
         /// <returns>返回类本身实例对象。</returns>
         public virtual Query SetTopRowCount(int topRowCount)
         {

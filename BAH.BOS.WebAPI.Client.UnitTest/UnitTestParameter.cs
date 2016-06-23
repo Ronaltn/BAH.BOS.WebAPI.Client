@@ -28,7 +28,7 @@ namespace BAH.BOS.WebAPI.Client.UnitTest
         {
             //主键获取通过查询管理中心T_BAS_DATACENTER_L表获得。
             //SELECT * FROM T_BAS_DATACENTER_L
-            get { return "564dd7c5e6c525"; }
+            get { return "5756387562288f"; }
         }//end property
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace BAH.BOS.WebAPI.Client.UnitTest
         /// </summary>
         public virtual string UserName
         {
-            get { return "demo"; }
+            get { return "00001"; }
         }//end property
 
         /// <summary>
