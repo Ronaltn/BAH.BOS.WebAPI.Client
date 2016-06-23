@@ -11,43 +11,46 @@ namespace BAH.BOS.WebAPI.Client.AuthOperationResult
     public class Context
     {
         [JsonProperty]
-        public ClientType ClientType { get; internal set; }//end property
+        public string UserLocale { get; set; }
 
         [JsonProperty]
-        public OrganizationInfo CurrentOrganizationInfo { get; internal set; }//end property
+        public string LogLocale { get; set; }
+
+        [JsonProperty("DBid")]
+        public string DBId { get; set; }
 
         [JsonProperty]
-        public string CustomName { get; internal set; }//end property
+        public DatabaseType DatabaseType { get; set; }
 
         [JsonProperty]
-        public DatabaseType DatabaseType { get; internal set; }//end property
+        public List<LanguageInfo> UseLanguages { get; set; }
 
         [JsonProperty]
-        public string DBId { get; internal set; }//end property
+        public int UserId { get; set; }
 
         [JsonProperty]
-        public bool IsCH_ZH_AutoTrans { get; internal set; }//end property
+        public string UserName { get; set; }
 
         [JsonProperty]
-        public CultureInfo LogLocale { get; internal set; }//end property
+        public string CustomName { get; set; }
 
         [JsonProperty]
-        public List<LanguageInfo> UseLanguages { set; internal get; }//end property
+        public string DisplayVersion { get; set; }
 
         [JsonProperty]
-        public long UserId { set; internal get; }//end property
+        public string UserToken { get; set; }
 
         [JsonProperty]
-        public CultureInfo UserLocale { set; internal get; }//end property
+        public OrganizationInfo CurrentOrganizationInfo { get; set; }
 
         [JsonProperty]
-        public string UserName { get; internal set; }//end property
+        public string IsCH_ZH_AutoTrans { get; set; }
 
         [JsonProperty]
-        public string UserToken { get; internal set; }//end property
+        public ClientType ClientType { get; set; }
 
         [JsonProperty]
-        public KDOAuthInfo WeiboAuthInfo { get; internal set; }//end property
+        public KDOAuthInfo WeiboAuthInfo { get; set; }
 
     }//end class
 }//end namespace

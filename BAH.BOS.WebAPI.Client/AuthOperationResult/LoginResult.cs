@@ -10,24 +10,30 @@ namespace BAH.BOS.WebAPI.Client.AuthOperationResult
     public class ValidateUserResult
     {
         [JsonProperty]
-        public string Message { get; internal set; }//end property
+        public string Message { get; set; }//end property
 
         [JsonProperty]
-        public LoginResultType LoginResultType { get; internal set; }//end property
+        public string MessageCode { get; set; }//end property
 
         [JsonProperty]
-        public Context Context { get; internal set; }//end property
+        public LoginResultType LoginResultType { get; set; }//end property
 
         [JsonProperty]
-        public string FormId { get; internal set; }//end property
+        public Context Context { get; set; }//end property
 
         [JsonProperty]
-        public RedirectFormParam RedirectFormParam { get; internal set; }//end property
+        public string FormId { get; set; }//end property
 
         [JsonProperty]
-        public object FormInputObject { get; internal set; }//end property
+        public RedirectFormParam RedirectFormParam { get; set; }//end property
 
         [JsonProperty]
-        public string ErrorStackTrace { get; internal set; }//end property
+        public object FormInputObject { get; set; }//end property
+
+        [JsonProperty]
+        public string ErrorStackTrace { get; set; }//end property
+
+        [JsonProperty("Lcid")]
+        public int LCID { get; set; }//end property
     }//end class
 }//end namespace
