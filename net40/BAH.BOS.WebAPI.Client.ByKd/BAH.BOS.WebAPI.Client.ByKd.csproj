@@ -103,6 +103,9 @@
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\BusinessServiceOperation\ExecuteServiceOperation.cs">
       <Link>BusinessServiceOperation\ExecuteServiceOperation.cs</Link>
     </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\BusinessServiceOperation\SessionService\Heartbeat.cs">
+      <Link>BusinessServiceOperation\SessionService\Heartbeat.cs</Link>
+    </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\Audit.cs">
       <Link>DynamicFormOperation\Audit.cs</Link>
     </Compile>
@@ -174,7 +177,6 @@
     </Compile>
     <Compile Include="APIException.cs" />
     <Compile Include="Asynchronous\KdHttpTask.cs" />
-    <Compile Include="BusinessServiceOperation\SessionService\Heartbeat.cs" />
     <Compile Include="KdAPIOperationExtension.cs" />
     <Compile Include="KdAPIRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
