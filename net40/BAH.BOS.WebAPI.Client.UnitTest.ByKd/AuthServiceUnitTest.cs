@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BAH.BOS.WebAPI.Client.AuthServiceOperation;
+using BAH.BOS.WebAPI.Client.AuthOperationResult;
 
 namespace BAH.BOS.WebAPI.Client.UnitTest
 {
@@ -11,12 +12,12 @@ namespace BAH.BOS.WebAPI.Client.UnitTest
         public void TestLogin()
         {
             var parameter = ParameterSingleton.GetInstance();
-            var result = APIClient.CreateAPIOperation<Login>(parameter.URL)
+            var context = APIClient.CreateAPIOperation<Login>(parameter.URL)
                                   .SetDBId(parameter.DBId)
                                   .SetUserName(parameter.UserName)
                                   .SetPassword(parameter.Password)
                                   .ToKdAPIRequest()
-                                  .Execute<string>();
+                                  .ToAPIResponse<Context>();
         }//end method
 
     }//end class

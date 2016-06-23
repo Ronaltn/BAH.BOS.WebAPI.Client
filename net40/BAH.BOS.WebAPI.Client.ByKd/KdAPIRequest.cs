@@ -90,7 +90,7 @@ namespace BAH.BOS.WebAPI.Client
         /// <returns>返回反序列化的泛型结果。</returns>
         public virtual T Execute<T>(FailCallbackHandler failCallback = null, int timeout = 100)
         {
-            CreateApiClientInstance();
+            this.CreateApiClientInstance();
 
             var paramatersArray = JsonConvert.DeserializeObject<object[]>(this.Operation.RequestParameters);
             return _client.Execute<T>(this.Operation.ServiceName, paramatersArray, failCallback, timeout);
@@ -132,7 +132,7 @@ namespace BAH.BOS.WebAPI.Client
         /// <summary>
         /// 创建ApiClient对象实例。
         /// </summary>
-        private void CreateApiClientInstance()
+        protected virtual void CreateApiClientInstance()
         {
             var rootUrl = this.Operation.RootUrl;
             if (rootUrl.LastIndexOf("/", 0, 1) < 0)

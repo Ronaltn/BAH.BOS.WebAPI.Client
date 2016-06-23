@@ -35,7 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Kingdee.BOS.WebApi.Client">
+    <Reference Include="Kingdee.BOS.WebApi.Client, Version=6.0.736.12, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.BOS.WebApi.Client.dll</HintPath>
     </Reference>
     <Reference Include="System" />
