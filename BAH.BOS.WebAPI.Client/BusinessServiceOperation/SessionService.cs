@@ -16,7 +16,7 @@ namespace BAH.BOS.WebAPI.Client.BusinessServiceOperation
         public SessionService()
         {
             this.SetAssemblyName("BAH.BOS.WebAPI.ServiceStub");
-            this.SetClassNameWithoutNamespace("SessionService");
+            this.SetClassNameWithoutNamespace("Session.SessionService");
         }//end constructor
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace BAH.BOS.WebAPI.Client.BusinessOperationResult
         /// 主体对象，类型由泛型定义。
         /// </summary>
         [JsonProperty]
-        public T Body { get; set; }//end property
+        public T Data { get; set; }//end property
 
     }//end class
 
