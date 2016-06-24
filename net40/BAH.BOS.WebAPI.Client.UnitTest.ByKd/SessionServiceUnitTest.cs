@@ -7,17 +7,16 @@ using System.Net;
 namespace BAH.BOS.WebAPI.Client.UnitTest
 {
     //[TestClass]
-    public class SessionServiceUnitTest : AuthServiceUnitTest
+    public class SessionServiceUnitTest : BaseUnitTest<UnitTestParameter>
     {
         [TestMethod]
-        public void TestSessionService()
+        public virtual void TestSessionService()
         {
-            TestLogin();
+            Login();
             TestHeartbeat();
         }//end method
 
-        [TestMethod]
-        public void TestHeartbeat()
+        public virtual void TestHeartbeat()
         {
             var result = APIClient.CreateAPIOperation<SessionService>(TestParameter.URL)
                                   .Heartbeat()

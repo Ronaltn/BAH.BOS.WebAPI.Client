@@ -58,6 +58,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client.UnitTest\BaseTestParameter.cs">
+      <Link>BaseTestParameter.cs</Link>
+    </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client.UnitTest\BaseUnitTest.cs">
       <Link>BaseUnitTest.cs</Link>
     </Compile>

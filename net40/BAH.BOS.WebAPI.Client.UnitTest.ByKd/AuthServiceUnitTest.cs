@@ -7,17 +7,12 @@ using System.Net;
 namespace BAH.BOS.WebAPI.Client.UnitTest
 {
     //[TestClass]
-    public class AuthServiceUnitTest : BaseUnitTest
+    public class AuthServiceUnitTest : BaseUnitTest<UnitTestParameter>
     {
         [TestMethod]
-        public void TestLogin()
+        public virtual void TestLogin()
         {
-            var result = APIClient.CreateAPIOperation<Login>(TestParameter.URL)
-                                  .SetDBId(TestParameter.DBId)
-                                  .SetUserName(TestParameter.UserName)
-                                  .SetPassword(TestParameter.Password)
-                                  .ToKdAPIRequest()
-                                  .ToAPIResponse<LoginResult>();
+            var result = this.Login();
 
             Assert.AreEqual(result.StatusCode, HttpStatusCode.OK);
             Assert.IsNull(result.Error);
