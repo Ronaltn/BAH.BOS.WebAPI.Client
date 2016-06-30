@@ -1,4 +1,5 @@
 ﻿using BAH.BOS.WebAPI.Client.BusinessOperationResult;
+using BAH.BOS.WebAPI.Client.BusinessOperationResult.SessionService;
 using BAH.BOS.WebAPI.Client.BusinessServiceOperation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -12,8 +13,17 @@ namespace BAH.BOS.WebAPI.Client.UnitTest
         [TestMethod]
         public virtual void TestSessionService()
         {
-            Login();
-            TestHeartbeat();
+            this.Login();
+            this.TestAlive();
+            this.TestHeartbeat();
+        }//end method
+
+        public virtual void TestAlive()
+        {
+            var result = APIClient.CreateAPIOperation<SessionService>(this.TestParameter.URL)
+                                  .Alive()
+                                  .ToKdAPIRequest()
+                                  .ToAPIResponse<AliveResult>();
         }//end method
 
         public virtual void TestHeartbeat()
