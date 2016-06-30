@@ -73,6 +73,7 @@
     <Compile Include="AuthServiceUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionServiceUnitTest.cs" />
+    <Compile Include="DemoServiceUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BAH.BOS.WebAPI.Client.ByKd\BAH.BOS.WebAPI.Client.ByKd.csproj">
