@@ -103,6 +103,9 @@
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\BusinessOperationResult\ServiceResult.cs">
       <Link>BusinessOperationResult\ServiceResult.cs</Link>
     </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\BusinessOperationResult\SessionService\AliveResult.cs">
+      <Link>BusinessOperationResult\SessionService\AliveResult.cs</Link>
+    </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\BusinessServiceOperation\ExecuteServiceOperation.cs">
       <Link>BusinessServiceOperation\ExecuteServiceOperation.cs</Link>
     </Compile>
