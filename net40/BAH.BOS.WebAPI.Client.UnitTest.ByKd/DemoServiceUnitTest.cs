@@ -17,7 +17,7 @@ namespace BAH.BOS.WebAPI.Client.UnitTest
         public virtual void TestHelloWorld()
         {
             var response = APIClient.CreateAPIOperation<ExecuteServiceOperation>(this.TestParameter.URL)
-                                    .SetClassName("BAH.BOS.WebAPI.ServiceStub")
+                                    .SetAssemblyName("BAH.BOS.WebAPI.ServiceStub")
                                     .SetClassNameWithoutNamespace("Demo.DemoService")
                                     .SetMethodName("HelloWorld")
                                     .ToKdAPIRequest()
@@ -27,7 +27,7 @@ namespace BAH.BOS.WebAPI.Client.UnitTest
         public virtual void TestHelloUser()
         {
             var response = APIClient.CreateAPIOperation<ExecuteServiceOperation>(this.TestParameter.URL)
-                                    .SetClassName("BAH.BOS.WebAPI.ServiceStub")
+                                    .SetAssemblyName("BAH.BOS.WebAPI.ServiceStub")
                                     .SetClassNameWithoutNamespace("Demo.DemoService")
                                     .SetMethodName("HelloUser")
                                     .ToKdAPIRequest()

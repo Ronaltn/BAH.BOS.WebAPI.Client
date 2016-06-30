@@ -31,7 +31,7 @@ namespace BAH.BOS.WebAPI.Client.BusinessServiceOperation
         {
             get
             {
-                return this.Parameters == null ? JsonConvert.SerializeObject(new List<object>()) : JsonConvert.SerializeObject(this.Parameters);
+                return JsonConvert.SerializeObject(this.Parameters);
             }
         }//end property
 
