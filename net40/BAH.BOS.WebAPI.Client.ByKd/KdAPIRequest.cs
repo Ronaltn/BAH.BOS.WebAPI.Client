@@ -37,19 +37,25 @@ namespace BAH.BOS.WebAPI.Client
             try
             {
                 result.Body = Execute<T>(failCallback, timeout);
+                result.StatusCode = HttpStatusCode.OK;
             }//end try
-            catch(APIException ex)
+            catch (APIException ex)
             {
                 result.StatusCode = (HttpStatusCode)ex.GetHttpCode();
                 result.Error = ex;
                 result.APIError = ex;
+            }
+            catch (ServiceException ex)
+            {
+                result.StatusCode = (HttpStatusCode)ex.GetHttpCode();
+                result.Error = ex;
+                result.APIError = new APIException(ex);
             }
             catch (Exception ex)
             {
                 result.Error = ex;
             }
 
-            result.StatusCode = HttpStatusCode.OK;
             return result;
         }//end method
 

@@ -12,6 +12,10 @@ namespace BAH.BOS.WebAPI.Client
     /// </summary>
     public class APIException : ServiceException
     {
-
+        public APIException() { }
+        public APIException(Exception ex) : base(ex) { }
+        public APIException(string message) : base(message) { }
+        public APIException(int code, string message) : base(code, message) { }
+        public APIException(int code, string message, Exception ex) : base(code, message, ex) { }
     }//end class
 }//end namespace
