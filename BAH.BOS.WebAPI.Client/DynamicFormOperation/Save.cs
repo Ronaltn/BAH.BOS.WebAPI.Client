@@ -33,11 +33,12 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
             {
                 var parametersArray = new object[]{
                     this.DynamicFormViewId,
-                    new 
+                    new
                     {
                         Creator = string.IsNullOrEmpty(this.Creator) ? "BAH" : this.Creator,
-                        NeedUpDateFields = this.NeedUpdateFieldKeys, 
-                        Model = this.Model 
+                        NeedUpDateFields = this.NeedUpdateFieldKeys,
+                        NumberSearch = (this.BDSetter == BaseDataSetter.Number),
+                        Model = this.Model
                     }
                 };
 
@@ -58,6 +59,27 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
         /// 读写需要更新的字段键值集合。
         /// </summary>
         public virtual List<string> NeedUpdateFieldKeys { get; set; }//end property
+
+        /// <summary>
+        /// 基础资料赋值方式。
+        /// </summary>
+        public enum BaseDataSetter
+        {
+            /// <summary>
+            /// 根据主键赋值。
+            /// </summary>
+            ID,
+
+            /// <summary>
+            /// 根据编码赋值。
+            /// </summary>
+            Number
+        }//end enum
+
+        /// <summary>
+        /// 读写基础资料赋值方式。
+        /// </summary>
+        public virtual BaseDataSetter BDSetter { get; set; }//end property
 
         /// <summary>
         /// 读写待保存的数据对象。
@@ -118,9 +140,20 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
         }//end method
 
         /// <summary>
+        /// 设置基础资料赋值方式。
+        /// </summary>
+        /// <param name="setter">赋值方式。</param>
+        /// <returns>返回类本身实例对象。</returns>
+        public virtual Save SetBDSetter(BaseDataSetter setter)
+        {
+            this.BDSetter = setter;
+            return this;
+        }//end method
+
+        /// <summary>
         /// 设置待保存的数据对象。
         /// </summary>
-        /// <typeparam name="T">继承APIOperation的类。</typeparam>
+        /// <typeparam name="T">返回类型泛型定义。</typeparam>
         /// <param name="model">待保存的数据对象。</param>
         /// <returns>返回类本身实例对象。</returns>
         public virtual T SetModel<T>(object model) where T : APIOperation
