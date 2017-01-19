@@ -187,6 +187,9 @@
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\Delete.cs">
       <Link>DynamicFormOperation\Delete.cs</Link>
     </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\Draft.cs">
+      <Link>DynamicFormOperation\Draft.cs</Link>
+    </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\ExecuteFormOperation.cs">
       <Link>DynamicFormOperation\ExecuteFormOperation.cs</Link>
     </Compile>
