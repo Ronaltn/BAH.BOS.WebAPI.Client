@@ -88,8 +88,14 @@
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthOperationResult\RedirectFormParam.cs">
       <Link>AuthOperationResult\RedirectFormParam.cs</Link>
     </Compile>
-    <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\Login.cs">
-      <Link>AuthServiceOperation\Login.cs</Link>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\LoginByAppSecret.cs">
+      <Link>AuthServiceOperation\LoginByAppSecret.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\LoginByAppSign.cs">
+      <Link>AuthServiceOperation\LoginByAppSign.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\LoginByUserPassword.cs">
+      <Link>AuthServiceOperation\LoginByUserPassword.cs</Link>
     </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\Logout.cs">
       <Link>AuthServiceOperation\Logout.cs</Link>
@@ -132,6 +138,9 @@
     </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\Delete.cs">
       <Link>DynamicFormOperation\Delete.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\Draft.cs">
+      <Link>DynamicFormOperation\Draft.cs</Link>
     </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\DynamicFormOperation\ExecuteFormOperation.cs">
       <Link>DynamicFormOperation\ExecuteFormOperation.cs</Link>

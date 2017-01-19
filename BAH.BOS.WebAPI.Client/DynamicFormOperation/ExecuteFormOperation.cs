@@ -32,7 +32,7 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
             get
             {
                 var parametersArray = new object[]{
-                    this.DynamicFormViewId,
+                    this.ObjectTypeId,
                     this.OperationNumber,
                     new { Parameters = this.Parameters, Model = this.Model }
                 };
@@ -67,11 +67,11 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
         /// <summary>
         /// 设置读写动态表单类型标识。
         /// </summary>
-        /// <param name="dynamicFormViewId">动态表单类型标识。</param>
+        /// <param name="objectTypeId">动态表单类型标识。</param>
         /// <returns>返回类本身实例对象。</returns>
-        public virtual ExecuteFormOperation SetDynamicFormViewId(string dynamicFormViewId)
+        public virtual ExecuteFormOperation SetObjectTypeId(string objectTypeId)
         {
-            return SetDynamicFormViewId<ExecuteFormOperation>(dynamicFormViewId);
+            return SetObjectTypeId<ExecuteFormOperation>(objectTypeId);
         }//end method
 
         /// <summary>

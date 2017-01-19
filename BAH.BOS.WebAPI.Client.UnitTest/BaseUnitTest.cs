@@ -25,7 +25,7 @@ namespace BAH.BOS.WebAPI.Client.UnitTest
         /// <returns>返回API结果。</returns>
         public virtual APIResponse<LoginResult> Login()
         {
-            var result = APIClient.CreateAPIOperation<Login>(this.TestParameter.URL)
+            var result = APIClient.CreateAPIOperation<LoginByUserPassword>(this.TestParameter.URL)
                                   .SetDBId(this.TestParameter.DBId)
                                   .SetUserName(this.TestParameter.UserName)
                                   .SetPassword(this.TestParameter.Password)

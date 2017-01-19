@@ -35,9 +35,9 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
                 {
                     new 
                     {
-                        FormId = this.DynamicFormViewId,
+                        FormId = this.ObjectTypeId,
                         TopRowCount = this.TopRowCount,
-                        Limit = this.PageRowCount,
+                        Limit = this.PageRowCount == default(int) ? 2000 : this.PageRowCount,
                         StartRow = this.PageIndex,
                         FilterString = this.Filter,
                         OrderString = this.OrderBy,
@@ -99,11 +99,11 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
         /// <summary>
         /// 设置读写动态表单类型标识。
         /// </summary>
-        /// <param name="dynamicFormViewId">动态表单类型标识。</param>
+        /// <param name="objectTypeId">动态表单类型标识。</param>
         /// <returns>返回类本身实例对象。</returns>
-        public virtual Query SetDynamicFormViewId(string dynamicFormViewId)
+        public virtual Query SetObjectTypeId(string objectTypeId)
         {
-            return this.SetDynamicFormViewId<Query>(dynamicFormViewId);
+            return this.SetObjectTypeId<Query>(objectTypeId);
         }//end method
 
         /// <summary>

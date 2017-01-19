@@ -22,7 +22,7 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
             get
             {
                 var parametersArray = new object[]{
-                    this.DynamicFormViewId,
+                    this.ObjectTypeId,
                     new { CreateOrgId = this.CreateOrgId, Numbers = this.Numbers.ToArray<string>() }
                 };
 
@@ -51,11 +51,11 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
         /// <summary>
         /// 设置动态表单类型标识。
         /// </summary>
-        /// <param name="dynamicFormViewId">动态表单类型标识。</param>
+        /// <param name="objectTypeId">动态表单类型标识。</param>
         /// <returns>返回类本身实例对象。</returns>
-        public virtual SingleActionOperation SetDynamicFormViewId(string dynamicFormViewId)
+        public virtual SingleActionOperation SetObjectTypeId(string objectTypeId)
         {
-            return SetDynamicFormViewId<SingleActionOperation>(dynamicFormViewId);
+            return SetObjectTypeId<SingleActionOperation>(objectTypeId);
         }//end method
 
         /// <summary>

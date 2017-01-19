@@ -32,7 +32,7 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
             get
             {
                 var parametersArray = new object[]{
-                    this.DynamicFormViewId,
+                    this.ObjectTypeId,
                     new 
                     { 
                         Creator = string.IsNullOrEmpty(this.Creator) ? "BAH" : this.Creator , 

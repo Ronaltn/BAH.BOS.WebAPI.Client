@@ -8,9 +8,9 @@ using System.Text;
 namespace BAH.BOS.WebAPI.Client.AuthServiceOperation
 {
     /// <summary>
-    /// 执行登录操作。
+    /// 执行按应用签名登录操作。
     /// </summary>
-    public class Login : APIOperation
+    public class LoginByAppSign : APIOperation
     {
         #region 公共覆盖操作参数
 
@@ -21,7 +21,7 @@ namespace BAH.BOS.WebAPI.Client.AuthServiceOperation
         {
             get
             {
-                return "Kingdee.BOS.WebApi.ServicesStub.AuthService.ValidateUser";
+                return "Kingdee.BOS.WebApi.ServicesStub.AuthService.LoginBySign";
             }
         }//end property
 
@@ -35,7 +35,9 @@ namespace BAH.BOS.WebAPI.Client.AuthServiceOperation
                 var parametersArray = new object[]{
                     this.DBId,
                     this.UserName,
-                    this.Password,
+                    this.AppId,
+                    this.Timestamp,
+                    this.Sign,
                     this.UserLCID == default(int) ? CultureInfo.CurrentCulture.LCID : this.UserLCID
                 };
 
@@ -58,9 +60,19 @@ namespace BAH.BOS.WebAPI.Client.AuthServiceOperation
         public virtual string UserName { get; set; }//end property
 
         /// <summary>
-        /// 读写用户密码属性值。
+        /// 读写应用主键属性值。
         /// </summary>
-        public virtual string Password { get; set; }//end property
+        public virtual string AppId { get; set; }//end property
+
+        /// <summary>
+        /// 读写时间戳属性值。
+        /// </summary>
+        public virtual long Timestamp { get; set; }//end property
+
+        /// <summary>
+        /// 读写签名属性值。
+        /// </summary>
+        public virtual string Sign { get; set; }//end property
 
         /// <summary>
         /// 读写用户本地化语言标识属性值。
@@ -76,7 +88,7 @@ namespace BAH.BOS.WebAPI.Client.AuthServiceOperation
         /// </summary>
         /// <param name="dbId">数据库标识。</param>
         /// <returns>返回类本身实例对象。</returns>
-        public virtual Login SetDBId(string dbId)
+        public virtual LoginByAppSign SetDBId(string dbId)
         {
             this.DBId = dbId;
             return this;
@@ -87,20 +99,42 @@ namespace BAH.BOS.WebAPI.Client.AuthServiceOperation
         /// </summary>
         /// <param name="userName">用户名。</param>
         /// <returns>返回类本身实例对象。</returns>
-        public virtual Login SetUserName(string userName)
+        public virtual LoginByAppSign SetUserName(string userName)
         {
             this.UserName = userName;
             return this;
         }//end method
 
         /// <summary>
-        /// 设置用户密码。
+        /// 设置应用主键。
         /// </summary>
-        /// <param name="password">用户密码。</param>
+        /// <param name="appId">应用主键。</param>
         /// <returns>返回类本身实例对象。</returns>
-        public virtual Login SetPassword(string password)
+        public virtual LoginByAppSign SetAppId(string appId)
         {
-            this.Password = password;
+            this.AppId = appId;
+            return this;
+        }//end method
+
+        /// <summary>
+        /// 设置时间戳。
+        /// </summary>
+        /// <param name="timestamp">时间戳。</param>
+        /// <returns>返回类本身实例对象。</returns>
+        public virtual LoginByAppSign SetTimestamp(long timestamp)
+        {
+            this.Timestamp = timestamp;
+            return this;
+        }//end method
+
+        /// <summary>
+        /// 设置签名。
+        /// </summary>
+        /// <param name="sign">签名。</param>
+        /// <returns>返回类本身实例对象。</returns>
+        public virtual LoginByAppSign SetSign(string sign)
+        {
+            this.Sign = sign;
             return this;
         }//end method
 
@@ -109,7 +143,7 @@ namespace BAH.BOS.WebAPI.Client.AuthServiceOperation
         /// </summary>
         /// <param name="lcId">用户本地化语言标识。</param>
         /// <returns>返回类本身实例对象。</returns>
-        public virtual Login SetUserLCID(int lcId)
+        public virtual LoginByAppSign SetUserLCID(int lcId)
         {
             this.UserLCID = lcId;
             return this;
@@ -120,7 +154,7 @@ namespace BAH.BOS.WebAPI.Client.AuthServiceOperation
         /// </summary>
         /// <param name="culture">区域信息对象。</param>
         /// <returns>返回类本身实例对象。</returns>
-        public virtual Login SetUserLCID(CultureInfo culture)
+        public virtual LoginByAppSign SetUserLCID(CultureInfo culture)
         {
             this.UserLCID = culture.LCID;
             return this;

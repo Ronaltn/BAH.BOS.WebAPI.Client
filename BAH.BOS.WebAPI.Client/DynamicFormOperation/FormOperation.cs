@@ -15,7 +15,7 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
         /// <summary>
         /// 读写动态表单类型标识属性值。
         /// </summary>
-        public virtual string DynamicFormViewId { get; set; }//end property
+        public virtual string ObjectTypeId { get; set; }//end property
 
         #endregion
 
@@ -25,11 +25,11 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
         /// 设置读写动态表单类型标识。
         /// </summary>
         /// <typeparam name="T">继承APIOperation的类。</typeparam>
-        /// <param name="dynamicFormViewId">动态表单类型标识。</param>
+        /// <param name="objectTypeId">动态表单类型标识。</param>
         /// <returns>返回T定义类型的实例对象。</returns>
-        public virtual T SetDynamicFormViewId<T>(string dynamicFormViewId) where T : APIOperation
+        public virtual T SetObjectTypeId<T>(string objectTypeId) where T : APIOperation
         {
-            this.DynamicFormViewId = dynamicFormViewId;
+            this.ObjectTypeId = objectTypeId;
             return this as T;
         }//end method
 

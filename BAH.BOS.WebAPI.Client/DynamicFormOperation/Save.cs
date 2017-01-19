@@ -32,7 +32,7 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
             get 
             {
                 var parametersArray = new object[]{
-                    this.DynamicFormViewId,
+                    this.ObjectTypeId,
                     new
                     {
                         Creator = string.IsNullOrEmpty(this.Creator) ? "BAH" : this.Creator,
@@ -93,11 +93,11 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
         /// <summary>
         /// 设置读写动态表单类型标识。
         /// </summary>
-        /// <param name="dynamicFormViewId">动态表单类型标识。</param>
+        /// <param name="objectTypeId">动态表单类型标识。</param>
         /// <returns>返回类本身实例对象。</returns>
-        public virtual Save SetDynamicFormViewId(string dynamicFormViewId)
+        public virtual Save SetObjectTypeId(string objectTypeId)
         {
-            return SetDynamicFormViewId<Save>(dynamicFormViewId);
+            return SetObjectTypeId<Save>(objectTypeId);
         }//end method
 
         /// <summary>

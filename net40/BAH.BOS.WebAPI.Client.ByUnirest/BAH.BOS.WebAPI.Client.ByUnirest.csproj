@@ -136,8 +136,14 @@
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthOperationResult\RedirectFormParam.cs">
       <Link>AuthOperationResult\RedirectFormParam.cs</Link>
     </Compile>
-    <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\Login.cs">
-      <Link>AuthServiceOperation\Login.cs</Link>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\LoginByAppSecret.cs">
+      <Link>AuthServiceOperation\LoginByAppSecret.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\LoginByAppSign.cs">
+      <Link>AuthServiceOperation\LoginByAppSign.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\LoginByUserPassword.cs">
+      <Link>AuthServiceOperation\LoginByUserPassword.cs</Link>
     </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\AuthServiceOperation\Logout.cs">
       <Link>AuthServiceOperation\Logout.cs</Link>
