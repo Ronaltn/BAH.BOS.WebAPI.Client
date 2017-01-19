@@ -34,5 +34,15 @@ namespace BAH.BOS.WebAPI.Client.UnitTest
         /// </summary>
         public abstract string Password { get; }//end property
 
+        /// <summary>
+        /// 应用主键。
+        /// </summary>
+        public abstract string AppId { get; }//end property
+
+        /// <summary>
+        /// 应用密钥。
+        /// </summary>
+        public abstract string AppSecret { get; }//end property
+
     }//end class
 }//end namespace

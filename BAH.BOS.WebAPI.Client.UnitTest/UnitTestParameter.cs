@@ -39,5 +39,15 @@ namespace BAH.BOS.WebAPI.Client.UnitTest
             }
         }
 
+        public override string AppId
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public override string AppSecret
+        {
+            get { throw new NotImplementedException(); }
+        }
+
     }
 }
