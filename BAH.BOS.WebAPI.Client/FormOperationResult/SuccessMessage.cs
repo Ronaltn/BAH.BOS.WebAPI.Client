@@ -7,13 +7,13 @@ using System.Text;
 namespace BAH.BOS.WebAPI.Client.FormOperationResult
 {
     [JsonObject]
-    public class ValidationError
+    public class SuccessMessage
     {
         [JsonProperty]
         public string FieldName { get; internal set; }//end property
 
         [JsonProperty]
-        public string Messgae { get; internal set; }//end property
+        public string Message { get; internal set; }//end property
 
         [JsonProperty]
         public string DIndex { get; internal set; }//end property

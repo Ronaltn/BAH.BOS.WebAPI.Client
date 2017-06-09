@@ -16,12 +16,15 @@ namespace BAH.BOS.WebAPI.Client.FormOperationResult
         public string Message { get; internal set; }//end property
 
         [JsonProperty]
-        public string StackTrace { get; internal set; }//end property
-
-        [JsonProperty]
         public bool IsSuccess { get; internal set; }//end property
 
         [JsonProperty]
         public List<ValidationError> Errors { get; internal set; }//end property
+
+        [JsonProperty]
+        public List<SuccessEntity> SuccessEntitys { get; internal set; }//end property
+
+        [JsonProperty]
+        public List<SuccessMessage> SuccessMessages { get; internal set; }//end property
     }//end class
 }//end namespace

@@ -37,6 +37,10 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
                     {
                         Creator = string.IsNullOrEmpty(this.Creator) ? "BAH" : this.Creator,
                         NeedUpDateFields = this.NeedUpdateFieldKeys,
+                        NeedReturnFields = this.NeedReturnFieldKeys,
+                        IsDeleteEntry = this.IsDeleteEntry,
+                        SubSystemId = this.SubSystemId,
+                        IsVerifyBaseDataField = this.IsVerifyBaseDataField,
                         NumberSearch = (this.BDSetter == BaseDataSetter.Number),
                         Model = this.Model
                     }
@@ -59,6 +63,26 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
         /// 读写需要更新的字段键值集合。
         /// </summary>
         public virtual List<string> NeedUpdateFieldKeys { get; set; }//end property
+
+        /// <summary>
+        /// 读写需要返回的字段键值集合。
+        /// </summary>
+        public virtual List<string> NeedReturnFieldKeys { get; set; }//end property
+
+        /// <summary>
+        /// 是否先删除单据体数据。
+        /// </summary>
+        public virtual bool IsDeleteEntry { get; set; }//end property
+
+        /// <summary>
+        /// 表单所属子系统主键。
+        /// </summary>
+        public virtual string SubSystemId { get; set; }//end property
+
+        /// <summary>
+        /// 是否校验基础资料字段。
+        /// </summary>
+        public virtual bool IsVerifyBaseDataField { get; set; }//end property
 
         /// <summary>
         /// 基础资料赋值方式。
@@ -136,6 +160,33 @@ namespace BAH.BOS.WebAPI.Client.DynamicFormOperation
             }//end if
 
             this.NeedUpdateFieldKeys.Add(fieldKey);
+            return this;
+        }//end method
+
+        /// <summary>
+        /// 设置需要返回的字段键值集合。
+        /// </summary>
+        /// <param name="needReturnFieldKeys">需要返回的字段键值集合。</param>
+        /// <returns>返回类本身实例对象。</returns>
+        public virtual Save SetNeedReturnFieldKeys(List<string> needReturnFieldKeys)
+        {
+            this.NeedReturnFieldKeys = needReturnFieldKeys;
+            return this;
+        }//end method
+
+        /// <summary>
+        /// 添加需要返回的字段键值。
+        /// </summary>
+        /// <param name="fieldKey">需要返回的字段键值。</param>
+        /// <returns>返回类本身实例对象。</returns>
+        public virtual Save AddNeedReturnFieldKey(string fieldKey)
+        {
+            if (this.NeedReturnFieldKeys == null)
+            {
+                this.NeedReturnFieldKeys = new List<string>();
+            }//end if
+
+            this.NeedReturnFieldKeys.Add(fieldKey);
             return this;
         }//end method
 
