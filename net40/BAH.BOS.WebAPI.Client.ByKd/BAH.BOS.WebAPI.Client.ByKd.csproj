@@ -190,6 +190,12 @@
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\Save\SaveResult.cs">
       <Link>FormOperationResult\Save\SaveResult.cs</Link>
     </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\SuccessEntity.cs">
+      <Link>FormOperationResult\SuccessEntity.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\SuccessMessage.cs">
+      <Link>FormOperationResult\SuccessMessage.cs</Link>
+    </Compile>
     <Compile Include="..\..\BAH.BOS.WebAPI.Client\FormOperationResult\ValidationError.cs">
       <Link>FormOperationResult\ValidationError.cs</Link>
     </Compile>
